@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.goldtracker.ProfileFragment"
+        android:name="com.example.goldtracker.Screen.Profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
