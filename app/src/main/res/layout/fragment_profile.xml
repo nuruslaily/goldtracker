@@ -21,44 +21,40 @@
 
         <EditText
             android:id="@+id/edtUsername"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="272dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:ems="10"
             android:hint="Username"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="282dp" />
+            tools:layout_editor_absoluteY="156dp" />
 
         <EditText
             android:id="@+id/edtEmail"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="273dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtUsername" />
 
         <Button
             android:id="@+id/btnUpdateProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="375dp"
+            android:layout_height="48dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
             android:onClick="@{()->viewModel.onSaveProfile(edtUsername.getText().toString(),edtEmail.getText().toString())}"
             android:text="Update"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
@@ -69,6 +65,37 @@
             android:text="Back"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="24dp" />
+
+        <TextView
+            android:id="@+id/txtUsername"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:text="Username"
+            app:layout_constraintEnd_toStartOf="@+id/edtUsername"
+            app:layout_constraintHorizontal_bias="0.32"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="156dp" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Email"
+            app:layout_constraintEnd_toStartOf="@+id/edtEmail"
+            app:layout_constraintHorizontal_bias="0.177"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
+
+        <TextView
+            android:id="@+id/txtjudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EDIT PROFILE"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="100dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
