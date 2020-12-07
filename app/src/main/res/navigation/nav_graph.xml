@@ -26,5 +26,9 @@
         android:id="@+id/profileFragment"
         android:name="com.example.goldtracker.Screen.Profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <argument
+            android:name="profile "
+            app:argType="com.example.goldtracker.models.Profile" />
+    </fragment>
 </navigation>

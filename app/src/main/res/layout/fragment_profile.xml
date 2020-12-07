@@ -4,7 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="profile"
+            type="com.example.goldtracker.models.Profile" />
+        <variable
+            name="viewModel"
+            type="com.example.goldtracker.Screen.Profile.ProfileViewModel" />
 
     </data>
 
@@ -14,44 +19,34 @@
         tools:context=".screen.profile.ProfileFragment"
         >
 
-        <ImageView
-            android:id="@+id/imgMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/menu"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <EditText
-            android:id="@+id/extNamaPengguna"
+            android:id="@+id/edtUsername"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="248dp"
             android:layout_marginEnd="8dp"
             android:ems="10"
-            android:hint="Nama Pengguna"
+            android:hint="Username"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgMenu" />
+            tools:layout_editor_absoluteY="282dp" />
 
         <EditText
-            android:id="@+id/extAlamatEmail"
+            android:id="@+id/edtEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:ems="10"
-            android:hint="Alamat Email"
+            android:hint="Email"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/extNamaPengguna" />
+            app:layout_constraintTop_toBottomOf="@+id/edtUsername" />
 
         <Button
             android:id="@+id/btnUpdateProfile"
@@ -60,10 +55,20 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="Update Profile"
+            android:onClick="@{()->viewModel.onSaveProfile(edtUsername.getText().toString(),edtEmail.getText().toString())}"
+            android:text="Update"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/extAlamatEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+        <TextView
+            android:id="@+id/txtBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="24dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

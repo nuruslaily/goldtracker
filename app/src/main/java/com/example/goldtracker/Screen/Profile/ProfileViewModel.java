@@ -7,14 +7,15 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.goldtracker.models.Profile;
+import com.example.goldtracker.repository.profileRepo;
 
 public class ProfileViewModel extends ViewModel {
-    private ProfileRepository profileRepository;
+    private profileRepo profileRepository;
     private MutableLiveData<Profile> profileMutableLiveData = new MutableLiveData<>();
 
     public ProfileViewModel(Application application){
         super();
-        profileRepository = new ProfileRepository(application);
+        profileRepository = new profileRepo(application);
     }
 
     public void onSaveProfile(String username,String email){

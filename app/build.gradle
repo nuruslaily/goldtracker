@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
 }
-
+apply plugin: "androidx.navigation.safeargs"
 
 android {
     compileSdkVersion 30
@@ -53,8 +53,20 @@ dependencies {
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
-    implementation 'com.android.support:design:27.1.1'
+    def room_version = '2.2.5'
+    //java room
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
 
-    implementation 'com.android.support:support-v4:27.1.1'
+    //recyclerview
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    //viewpager
+    implementation 'androidx.viewpager2:viewpager2:1.1.0-alpha01'
+    //runtime permission
+    implementation 'com.karumi:dexter:6.2.2'
+
+    //debug database
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
 }
