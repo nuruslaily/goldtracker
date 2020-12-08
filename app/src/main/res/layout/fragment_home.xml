@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:text="@{viewModel.profileLiveData.username}"
             android:fontFamily="monospace"
             android:textSize="20dp"
@@ -34,47 +35,50 @@
             app:layout_constraintStart_toEndOf="@+id/imgProfile"
             app:layout_constraintTop_toTopOf="@+id/imgProfile" />
 
+
         <TextView
             android:id="@+id/textEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@{viewModel.profileLiveData.email}"
+            android:layout_marginLeft="16dp"
             android:fontFamily="monospace"
+            android:text="@{viewModel.profileLiveData.email}"
             app:layout_constraintBottom_toBottomOf="@+id/imgProfile"
             app:layout_constraintStart_toEndOf="@+id/imgProfile"
             app:layout_constraintTop_toBottomOf="@+id/textUsername" />
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="152dp">
 
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Wallet" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Transactions" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Buy/Sell" />
+        </com.google.android.material.tabs.TabLayout>
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/view_pager"
+            android:id="@+id/viewPager"
             android:layout_width="414dp"
             android:layout_height="579dp"
             tools:layout_editor_absoluteX="-2dp"
-            tools:layout_editor_absoluteY="152dp">
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.tabs.TabItem android:text="Wallet"
-                    android:layout_height="match_parent"
-                    android:layout_width="wrap_content"/>
-
-                <com.google.android.material.tabs.TabItem android:text="Transactions"
-                    android:layout_height="match_parent"
-                    android:layout_width="wrap_content"/>
-
-                <com.google.android.material.tabs.TabItem android:text="Buy/Sell"
-                    android:layout_height="match_parent"
-                    android:layout_width="wrap_content"/>
-            </com.google.android.material.tabs.TabLayout>
-        </androidx.viewpager.widget.ViewPager>
+            tools:layout_editor_absoluteY="152dp"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnedtProfil"
             android:layout_width="73dp"
             android:layout_height="35dp"
             android:text="Edit"
