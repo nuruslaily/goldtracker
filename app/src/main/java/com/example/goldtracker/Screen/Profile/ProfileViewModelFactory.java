@@ -7,15 +7,18 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 public class ProfileViewModelFactory implements ViewModelProvider.Factory {
-    private Application profil;
+    private Application app;
 
-    public ProfileViewModelFactory(Application profil) {
-        this.profil=profil;
+    public ProfileViewModelFactory(Application app) {
+        this.app=app;
     }
 
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        return (T) new ProfileViewModel(profil);
+        if (modelClass.isAssignableFrom(ProfileViewModel.class)) {
+            return (T) new ProfileViewModel(app);
+        }
+        throw new IllegalArgumentException("Wrong View Model Class");
     }
 }

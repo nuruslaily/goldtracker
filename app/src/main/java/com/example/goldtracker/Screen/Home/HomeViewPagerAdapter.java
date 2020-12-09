@@ -8,7 +8,11 @@ import com.example.goldtracker.Screen.Buysell.BuysellFragment;
 import com.example.goldtracker.Screen.Transaction.TransactionFragment;
 import com.example.goldtracker.Screen.Wallet.WalletFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomeViewPagerAdapter extends FragmentStateAdapter {
+
     public HomeViewPagerAdapter(@NonNull Fragment fragment) {
         super(fragment);
     }

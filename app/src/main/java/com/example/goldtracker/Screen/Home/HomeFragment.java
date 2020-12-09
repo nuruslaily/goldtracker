@@ -20,7 +20,6 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.goldtracker.R;
-import com.example.goldtracker.Screen.HomeFragmentDirections;
 import com.example.goldtracker.databinding.FragmentHomeBinding;
 import com.example.goldtracker.models.Profile;
 import com.google.android.material.tabs.TabLayout;

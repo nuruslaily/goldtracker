@@ -1,4 +1,4 @@
-package com.example.goldtracker.Screen.Home;
+package com.example.goldtracker.Screen.Wallet;
 
 import android.app.Application;
 
@@ -8,11 +8,13 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.goldtracker.Screen.Profile.ProfileViewModel;
 
-public class HomeViewModelFactory implements ViewModelProvider.Factory {
+public class WalletViewModelFactory implements ViewModelProvider.Factory {
     private Application app;
-    public HomeViewModelFactory(Application app) {
+
+    public WalletViewModelFactory(Application app) {
         this.app=app;
     }
+
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {

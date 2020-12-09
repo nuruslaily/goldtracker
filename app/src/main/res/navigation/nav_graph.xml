@@ -30,5 +30,8 @@
         <argument
             android:name="profile "
             app:argType="com.example.goldtracker.models.Profile" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
