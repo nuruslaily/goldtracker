@@ -53,7 +53,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onChanged(Profile profile) {
                 if(profile!=null){
-                    NavDirections action = ProfileFragmentDirections.actionProfileFragmentToPorfolioFragment();
+                    NavDirections action = ProfileFragmentDirections.actionProfileFragmentToHomeFragment();
                     Navigation.findNavController(requireView()).navigate(action);
                     viewModel.onSaveProfileNavigated();
                 }
